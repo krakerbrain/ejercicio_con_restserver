@@ -6,7 +6,8 @@ const app = express();
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
-app.use(require("./routes/usuario"));
+//Configuración global de rutas
+app.use(require("./routes/index"));
 
 mongoose.connect(process.env.URLDB, (err, res) => {
   if (err) throw err;
