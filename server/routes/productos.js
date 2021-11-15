@@ -170,6 +170,7 @@ app.delete("/productos/:id", verificaToken, (req, res) => {
   let id = req.params.id;
 
   Producto.findById(id, (err, productoDB) => {
+    console.log(productoDB);
     if (err) {
       return res.status(500).json({
         ok: false,
