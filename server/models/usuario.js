@@ -54,4 +54,4 @@ usuarioSchema.plugin(uniqueValidator, {
   message: "{PATH} debe de ser unico",
 });
 
-module.exports = mongoose.model("Usuarios", usuarioSchema);
+module.exports = mongoose.model("Usuario", usuarioSchema);
