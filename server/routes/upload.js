@@ -100,7 +100,10 @@ function imagenUsuario(id, res, nombreArchivo) {
       if (err) {
         return res.status(500).json({
           ok: false,
-          err,
+          err: {
+            message: "Error salvando imagen",
+            err,
+          },
         });
       }
 
@@ -140,7 +143,10 @@ function imagenProducto(id, res, nombreArchivo) {
       if (err) {
         return res.status(500).json({
           ok: false,
-          err,
+          err: {
+            message: "Error salvando imagen",
+            err,
+          },
         });
       }
 
