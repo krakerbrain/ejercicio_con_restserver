@@ -60,7 +60,10 @@ app.put("/upload/:tipo/:id", function (req, res) {
     if (err)
       return res.status(500).json({
         ok: false,
-        err,
+        err: {
+          message: "error en ruta",
+          err,
+        },
       });
 
     //Aqui imagen cargada
